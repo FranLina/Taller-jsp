@@ -31,7 +31,7 @@
             <th>Modelo</th>
             <th>Color</th>
             <th>Revisado</th>
-            <th colspan="3"><a href="nuevoCoche.jsp">Nuevo</a> <a href="borrarTodo.jsp">Eliminar Todos</a></th>
+            <th colspan="3"><a href="nuevoCoche.jsp">Nuevo</a> <a href="borraTodo.jsp">Eliminar Todos</a></th>
         </tr>
             <%
 

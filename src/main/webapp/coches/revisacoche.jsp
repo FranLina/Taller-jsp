@@ -9,20 +9,15 @@
 
 <%
     String matricula = request.getParameter("matricula");
-    String revisado = request.getParameter("revisado");
-
-    Coche coche = new Coche();
-    coche.setMatricula(matricula);
-    if(revisado == "N")
-        coche.setRevisado("S");
-    else
-        coche.setRevisado("N");
-
     List<Coche> coches = (List) session.getAttribute("coches");
-
-    coches.remove(coche);
-    coches.add(coche);
-
+    for(int i=0;i<coches.size();i++){
+        if(coches[i].getMatricula.equals(matricula)){
+            if(coches[i].getRevisado == "N")
+                coches[i].setRevisado("S")
+            else
+                coches[i].setRevisado("N")
+        }
+    }
     session.setAttribute("coches", coches);
 
     response.sendRedirect("coches.jsp");
